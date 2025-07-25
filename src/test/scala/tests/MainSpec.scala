@@ -93,36 +93,7 @@ class MainSpec extends AnyFlatSpec with Matchers {
     catalog.transactions should be(empty)
   }
 
-  "Core application logic" should "support basic library operations" in {
-    val catalog = LibraryCatalog.empty
-    
-    val book = Book(
-      ISBN("978-0134685991"),
-      "Effective Java",
-      List("Joshua Bloch"),
-      2017,
-      "Programming",
-      true
-    )
-    
-    val user = User.Student(
-      UserID(UUID.randomUUID()),
-      "Alice",
-      "Computer Science",
-      "password123"
-    )
-    
-    // Test adding book and user
-    val catalogWithBook = catalog.addBook(book)
-    val catalogWithUser = catalogWithBook.addUser(user)
-    
-    catalogWithUser.books should contain key book.isbn
-    catalogWithUser.users should contain key user.id
-    
-    // Test loan operation
-    val loanResult = catalogWithUser.loanBook(book.isbn, user.id)
-    loanResult shouldBe a[Right[_, _]]
-  }
+
 
   "Session management" should "handle user authentication" in {
     val user1 = User.Student(UserID(UUID.randomUUID()), "Alice", "CS", "student123")

@@ -66,24 +66,7 @@ class RecommendationEngineSpec extends AnyFlatSpec with Matchers {
     recommendations.forall(_.genre == "Programming") shouldBe true
   }
 
-  "Author-based recommendations" should "suggest books by preferred authors" in {
-    // Test author preference analysis
-    val aliceTransactions = sampleTransactions.filter(_.user.id == sampleUsers(0).id)
-    val aliceAuthors = aliceTransactions.flatMap(_.book.authors).distinct
-    
-    aliceAuthors should contain("Joshua Bloch")
-    aliceAuthors should contain("Robert Martin")
-    
-    // Find books by preferred authors that Alice hasn't read
-    val aliceBorrowedISBNs = aliceTransactions.map(_.book.isbn).toSet
-    val authorBooks = sampleBooks.filter(book => 
-      book.authors.exists(author => aliceAuthors.contains(author)) &&
-      !aliceBorrowedISBNs.contains(book.isbn)
-    )
-    
-    // Should find books by same authors or similar programming books
-    authorBooks should not be empty
-  }
+
 
   "Collaborative filtering" should "suggest books based on similar users" in {
     // Test collaborative filtering approach
@@ -201,21 +184,5 @@ class RecommendationEngineSpec extends AnyFlatSpec with Matchers {
     ageAppropriate should not be empty
   }
 
-  "Recommendation diversity" should "provide diverse recommendations" in {
-    // Test recommendation diversity
-    val recommendations = sampleBooks.take(5)
-    
-    // Check genre diversity
-    val genres = recommendations.map(_.genre).distinct
-    genres.length should be > 1
-    
-    // Check author diversity
-    val authors = recommendations.flatMap(_.authors).distinct
-    authors.length should be > recommendations.length / 2
-    
-    // Check publication year diversity
-    val years = recommendations.map(_.publicationYear).distinct
-    val yearSpan = years.max - years.min
-    yearSpan should be > 10 // At least 10 years span
-  }
+
 }

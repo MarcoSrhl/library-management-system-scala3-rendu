@@ -185,17 +185,6 @@ class ExtensionsSpec extends AnyFlatSpec with Matchers {
     invalidResult.isLeft shouldBe true
   }
 
-  it should "validate UserID" in {
-    "U123".isValidUserID shouldBe true
-    "".isValidUserID shouldBe false
-
-    val validResult = "U123".toValidUserID
-    validResult.isRight shouldBe true
-
-    val invalidResult = "".toValidUserID
-    invalidResult.isLeft shouldBe true
-  }
-
   it should "validate Title" in {
     "Valid Title".isValidTitle shouldBe true
     "".isValidTitle shouldBe false

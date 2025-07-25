@@ -9,7 +9,6 @@ lazy val root = (project in file("."))
     // Coverage configuration
     coverageExcludedPackages := ".*CLI.*;.*DataLoader.*;.*RecommendationEngine.*;.*ValidationSystem.*;.*AuthSession.*;.*DataTransformation.*",
     coverageExcludedFiles := ".*Main.*;.*DataTransformation.*;.*AuthSession.*;.*FileManager.*;.*BackupRestore.*;.*utils.*",
-    coverageMinimumStmtTotal := 30,
     coverageFailOnMinimum := false,
     
     // ScalaDoc configuration

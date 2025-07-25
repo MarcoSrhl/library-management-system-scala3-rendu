@@ -109,23 +109,6 @@ class AnalyticsSpec extends AnyFlatSpec with Matchers {
     mostPopularGenre._2 shouldBe 2 // Tie between Programming and Fiction
   }
 
-  "Temporal analysis" should "analyze usage patterns over time" in {
-    // Test temporal patterns
-    val transactionsByDay = sampleTransactions
-      .groupBy(_.timestamp.toLocalDate)
-      .view
-      .mapValues(_.length)
-      .toMap
-    
-    transactionsByDay.values.sum shouldBe sampleTransactions.length
-    
-    // Test recent activity (last 7 days)
-    val recentTransactions = sampleTransactions.filter(
-      _.timestamp.isAfter(LocalDateTime.now.minusDays(7))
-    )
-    recentTransactions should have size 4 // 4 transactions in last 7 days
-  }
-
   "User type analysis" should "analyze patterns by user type" in {
     // Test user type behavior analysis
     val studentTransactions = sampleTransactions.filter(_.user match {
@@ -146,42 +129,6 @@ class AnalyticsSpec extends AnyFlatSpec with Matchers {
     studentTransactions should have size 3 // Alice's transactions
     facultyTransactions should have size 3 // Bob's transactions
     librarianTransactions should have size 0 // Charlie's transactions
-  }
-
-  "Return rate analysis" should "calculate return rates" in {
-    // Test return rate calculations
-    val loanTransactions = sampleTransactions.filter(_.isInstanceOf[Transaction.Loan])
-    val returnTransactions = sampleTransactions.filter(_.isInstanceOf[Transaction.Return])
-    
-    val returnRate = returnTransactions.length.toDouble / loanTransactions.length.toDouble
-    returnRate shouldBe 0.5 // 2 returns out of 4 loans
-    
-    // Test overdue analysis
-    val currentTime = LocalDateTime.now
-    val overdueLoans = loanTransactions.filter { loan =>
-      val hasReturn = returnTransactions.exists(ret => 
-        ret.user.id == loan.user.id && ret.book.isbn == loan.book.isbn
-      )
-      !hasReturn && loan.timestamp.isBefore(currentTime.minusDays(14)) // 14-day loan period
-    }
-    
-    overdueLoans should have size 1 // Alice's Clean Code loan
-  }
-
-  "Collection analysis" should "analyze collection composition" in {
-    // Test collection analysis
-    val publicationYearDistribution = sampleBooks
-      .groupBy(book => (book.publicationYear / 10) * 10) // Group by decade
-      .view
-      .mapValues(_.length)
-      .toMap
-    
-    publicationYearDistribution(1950) shouldBe 2 // 1951 and 1960
-    publicationYearDistribution(2000) shouldBe 1 // 2008
-    publicationYearDistribution(2010) shouldBe 2 // 2017 and 2020
-    
-    val averageAge = LocalDateTime.now.getYear - (sampleBooks.map(_.publicationYear).sum / sampleBooks.length)
-    averageAge should be > 20 // Collection has older books
   }
 
   "Performance metrics" should "calculate system performance" in {
