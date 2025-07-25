@@ -1,0 +1,58 @@
+[
+  {
+    "$type": "Librarian",
+    "id": "9d168ffc-e724-470e-9f60-f6a27b800693",
+    "name": "Admin",
+    "employeeId": "LIB001",
+    "password": "admin123"
+  },
+  {
+    "$type": "Faculty",
+    "id": "e91a27db-d4f4-4a2a-8b38-6682a4c7a411",
+    "name": "Dr. Smith",
+    "department": "Engineering",
+    "password": "faculty123"
+  },
+  {
+    "$type": "Student",
+    "id": "8103e678-87b3-4f4f-af79-0aa7cc901782",
+    "name": "Alice",
+    "major": "Computer Science",
+    "password": "student12alice3"
+  },
+  {
+    "$type": "Student",
+    "id": "47b0d866-1f02-46e0-9f47-dfbe92977206",
+    "name": "Paulzam",
+    "major": "Data IA",
+    "password": "paulzam123"
+  },
+  {
+    "$type": "Faculty",
+    "id": "f91248c1-fb78-48bc-b2bb-311e55ad48e3",
+    "name": "Test",
+    "department": "test test",
+    "password": "test123"
+  },
+  {
+    "$type": "Faculty",
+    "id": "18eae434-222b-4829-b13e-56186db44d86",
+    "name": "Marquito",
+    "department": "Science",
+    "password": "marquito123"
+  },
+  {
+    "$type": "Student",
+    "id": "69a93a90-7ba7-4b9f-ad2d-5dfef9cb506d",
+    "name": "Marco",
+    "major": "Data",
+    "password": "marco123"
+  },
+  {
+    "$type": "Student",
+    "id": "8103e678-87b3-4f4f-af79-0aa7cc901452",
+    "name": "Adam",
+    "major": "Computer Science",
+    "password": "adamou123"
+  }
+]

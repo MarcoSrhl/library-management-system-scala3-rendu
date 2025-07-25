@@ -1,0 +1,330 @@
+[
+  {
+    "$type": "Loan",
+    "book": {
+      "isbn": "978-0-345-39180-3",
+      "title": "Dune",
+      "authors": [
+        "Frank Herbert"
+      ],
+      "publicationYear": 1965,
+      "genre": "Science Fiction",
+      "isAvailable": false
+    },
+    "user": {
+      "$type": "Faculty",
+      "id": "f91248c1-fb78-48bc-b2bb-311e55ad48e3",
+      "name": "Test",
+      "department": "test test",
+      "password": "test123"
+    },
+    "timestamp": "2025-07-24T00:17:05.943552700",
+    "dueDate": [
+      "2025-10-22T00:17:05.943552700"
+    ]
+  },
+  {
+    "$type": "Loan",
+    "book": {
+      "isbn": "978-0-262-03384-8",
+      "title": "Introduction to Algorithms",
+      "authors": [
+        "Thomas H. Cormen",
+        "Charles E. Leiserson",
+        "Ronald L. Rivest",
+        "Clifford Stein"
+      ],
+      "publicationYear": 2009,
+      "genre": "Computer Science",
+      "isAvailable": false
+    },
+    "user": {
+      "$type": "Student",
+      "id": "47b0d866-1f02-46e0-9f47-dfbe92977206",
+      "name": "Paulzam",
+      "major": "Data IA",
+      "password": "paulzam123"
+    },
+    "timestamp": "2025-07-23T23:45:32.682266400",
+    "dueDate": [
+      "2025-08-22T23:45:32.681264600"
+    ]
+  },
+  {
+    "$type": "Reservation",
+    "book": {
+      "isbn": "978-0-553-29337-0",
+      "title": "Foundation",
+      "authors": [
+        "Isaac Asimov"
+      ],
+      "publicationYear": 1951,
+      "genre": "Science Fiction",
+      "isAvailable": true
+    },
+    "user": {
+      "$type": "Student",
+      "id": "8103e678-87b3-4f4f-af79-0aa7cc901452",
+      "name": "Adam",
+      "major": "Computer Science",
+      "password": "adamou123"
+    },
+    "timestamp": "2025-07-23T14:49:00.985969700",
+    "startDate": "2025-07-30T00:00",
+    "endDate": "2025-08-30T00:00"
+  },
+  {
+    "$type": "Loan",
+    "book": {
+      "isbn": "12345",
+      "title": "Finance ML",
+      "authors": [
+        "Marco Serhal"
+      ],
+      "publicationYear": 2025,
+      "genre": "Science",
+      "isAvailable": false
+    },
+    "user": {
+      "$type": "Student",
+      "id": "8103e678-87b3-4f4f-af79-0aa7cc901452",
+      "name": "Adam",
+      "major": "Computer Science",
+      "password": "adamou123"
+    },
+    "timestamp": "2025-07-23T01:08:08.472130200",
+    "dueDate": [
+      "2025-08-22T01:08:08.472130200"
+    ]
+  },
+  {
+    "$type": "Loan",
+    "book": {
+      "isbn": "978-0-07-351384-4",
+      "title": "Corporate Finance",
+      "authors": [
+        "Stephen A. Ross",
+        "Randolph W. Westerfield",
+        "Jeffrey Jaffe"
+      ],
+      "publicationYear": 2018,
+      "genre": "Economics",
+      "isAvailable": false
+    },
+    "user": {
+      "$type": "Student",
+      "id": "8103e678-87b3-4f4f-af79-0aa7cc901452",
+      "name": "Adam",
+      "major": "Computer Science",
+      "password": "adamou123"
+    },
+    "timestamp": "2025-07-23T00:54:32.639612900",
+    "dueDate": [
+      "2025-08-22T00:54:32.639612900"
+    ]
+  },
+  {
+    "$type": "Return",
+    "book": {
+      "isbn": "978-0-321-35668-0",
+      "title": "Effective Java",
+      "authors": [
+        "Joshua Bloch"
+      ],
+      "publicationYear": 2017,
+      "genre": "Programming",
+      "isAvailable": true
+    },
+    "user": {
+      "$type": "Student",
+      "id": "8103e678-87b3-4f4f-af79-0aa7cc901452",
+      "name": "Adam",
+      "major": "Computer Science",
+      "password": "adamou123"
+    },
+    "timestamp": "2025-07-22T23:26:26.815180600"
+  },
+  {
+    "$type": "Loan",
+    "book": {
+      "isbn": "978-0-321-35668-0",
+      "title": "Effective Java",
+      "authors": [
+        "Joshua Bloch"
+      ],
+      "publicationYear": 2017,
+      "genre": "Programming",
+      "isAvailable": false
+    },
+    "user": {
+      "$type": "Student",
+      "id": "8103e678-87b3-4f4f-af79-0aa7cc901452",
+      "name": "Adam",
+      "major": "Computer Science",
+      "password": "adamou123"
+    },
+    "timestamp": "2025-07-22T13:57:15.073085700",
+    "dueDate": [
+      "2025-08-21T13:57:15.073085700"
+    ]
+  },
+  {
+    "$type": "Return",
+    "book": {
+      "isbn": "12345",
+      "title": "Finance ML",
+      "authors": [
+        "Marco Serhal"
+      ],
+      "publicationYear": 2025,
+      "genre": "Science",
+      "isAvailable": true
+    },
+    "user": {
+      "$type": "Student",
+      "id": "8103e678-87b3-4f4f-af79-0aa7cc901452",
+      "name": "Adam",
+      "major": "Computer Science",
+      "password": "adamou123"
+    },
+    "timestamp": "2025-07-22T13:22:09.697966"
+  },
+  {
+    "$type": "Loan",
+    "book": {
+      "isbn": "12345",
+      "title": "Finance ML",
+      "authors": [
+        "Marco Serhal"
+      ],
+      "publicationYear": 2025,
+      "genre": "Science",
+      "isAvailable": false
+    },
+    "user": {
+      "$type": "Student",
+      "id": "8103e678-87b3-4f4f-af79-0aa7cc901452",
+      "name": "Adam",
+      "major": "Computer Science",
+      "password": "adamou123"
+    },
+    "timestamp": "2025-07-22T12:46:12.855442600",
+    "dueDate": [
+      "2025-08-21T12:46:12.855442600"
+    ]
+  },
+  {
+    "$type": "Reservation",
+    "book": {
+      "isbn": "978-0-141-18265-0",
+      "title": "The Republic",
+      "authors": [
+        "Plato"
+      ],
+      "publicationYear": -380,
+      "genre": "Philosophy",
+      "isAvailable": false
+    },
+    "user": {
+      "$type": "Student",
+      "id": "8103e678-87b3-4f4f-af79-0aa7cc901452",
+      "name": "Adam",
+      "major": "Computer Science",
+      "password": "adamou123"
+    },
+    "timestamp": "2025-07-20T21:58:03.443688200",
+    "startDate": "2025-09-15T00:00",
+    "endDate": "2025-10-15T00:00"
+  },
+  {
+    "$type": "Return",
+    "book": {
+      "isbn": "12345",
+      "title": "Finance ML",
+      "authors": [
+        "Marco Serhal"
+      ],
+      "publicationYear": 2025,
+      "genre": "Science",
+      "isAvailable": true
+    },
+    "user": {
+      "$type": "Student",
+      "id": "8103e678-87b3-4f4f-af79-0aa7cc901452",
+      "name": "Adam",
+      "major": "Computer Science",
+      "password": "adamou123"
+    },
+    "timestamp": "2025-07-20T21:22:31.321235100"
+  },
+  {
+    "$type": "Reservation",
+    "book": {
+      "isbn": "12345",
+      "title": "Finance ML",
+      "authors": [
+        "Marco Serhal"
+      ],
+      "publicationYear": 2025,
+      "genre": "Science",
+      "isAvailable": false
+    },
+    "user": {
+      "$type": "Student",
+      "id": "8103e678-87b3-4f4f-af79-0aa7cc901452",
+      "name": "Adam",
+      "major": "Computer Science",
+      "password": "adamou123"
+    },
+    "timestamp": "2025-07-20T21:21:45.220364900",
+    "startDate": "2025-09-18T00:00",
+    "endDate": "2025-09-21T00:00"
+  },
+  {
+    "$type": "Reservation",
+    "book": {
+      "isbn": "12345",
+      "title": "Finance ML",
+      "authors": [
+        "Marco Serhal"
+      ],
+      "publicationYear": 2025,
+      "genre": "Science",
+      "isAvailable": false
+    },
+    "user": {
+      "$type": "Student",
+      "id": "8103e678-87b3-4f4f-af79-0aa7cc901782",
+      "name": "Alice",
+      "major": "Computer Science",
+      "password": "student12alice3"
+    },
+    "timestamp": "2025-07-20T21:15:07.595131400",
+    "startDate": "2025-09-21T00:00",
+    "endDate": "2025-10-21T00:00"
+  },
+  {
+    "$type": "Loan",
+    "book": {
+      "isbn": "12345",
+      "title": "Finance ML",
+      "authors": [
+        "Marco Serhal"
+      ],
+      "publicationYear": 2025,
+      "genre": "Science",
+      "isAvailable": false
+    },
+    "user": {
+      "$type": "Student",
+      "id": "8103e678-87b3-4f4f-af79-0aa7cc901452",
+      "name": "Adam",
+      "major": "Computer Science",
+      "password": "adamou123"
+    },
+    "timestamp": "2025-07-20T21:03:02.442929900",
+    "dueDate": [
+      "2025-08-19T21:03:02.442929900"
+    ]
+  }
+]

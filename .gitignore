@@ -1,0 +1,29 @@
+# === Scala / sbt ===
+target/
+project/target/
+project/project/
+
+# === IDEs ===
+.idea/
+.vscode/
+.metals/
+*.iml
+
+# === OS / temp ===
+.DS_Store
+Thumbs.db
+*.log
+*.bak
+
+# === SBT History / cache ===
+.history
+.cache/
+.ensime_cache/
+
+
+
+# === IntelliJ worksheets ===
+*.sc.worksheet
+
+# === Environment / config ===
+.env
